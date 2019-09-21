@@ -72,6 +72,7 @@ body {
 .navigation-right {
   margin-left: 250px;
   position: relative;
+  transition: margin-left .3s ease-in-out;
   /* min-height: 70px; */
 }
 .navigation-right::after {
@@ -83,6 +84,10 @@ body {
   height: 3px;
   width: 100%;
   background-color: purple;
+}
+.ml-40 {
+  margin-left: 40px !important;
+  transition: all .3s ease-in-out;
 }
 
 .list {
@@ -133,6 +138,7 @@ body {
   -webkit-box-shadow: 5px -1px 1px rgba(0,0,0,.9);
           box-shadow: 5px -1px 1px rgba(0,0,0,.9);
   z-index: 999;
+  transition: width .3s ease-in-out;
 }
 
 .sidebar-inner {
@@ -143,12 +149,18 @@ body {
   width: 100%;
 }
 
+.collapsed {
+  width: 40px;
+  transition: all .3s ease-in-out;
+}
+
 /*******************************
   MAIN CONTENT STYLE
 *******************************/
 .content-container {
   margin-left: 250px;
   overflow: hidden;
+  transition: margin-left .3s ease-in-out;
 }
 
 .content {
