@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--<script src="https://kit.fontawesome.com/856a1c6e43.js" crossorigin="anonymous"></script>-->
+  <link rel="stylesheet" href="./styles/css/all.css">
   <link rel="stylesheet" href="./styles/font.css">
   <link rel="stylesheet" href="./styles/app.css">
   <title>Consolia FE zadatak</title>
@@ -14,19 +16,25 @@
     <div class="navigation-right">
       <ul class="list">
         <li class="list-item m_r_auto">
-          <a href="#" class="list-link" id="toggle-sidebar">1</a>
+          <a href="#" class="list-link" id="toggle-sidebar">
+            <i class="fas fa-align-justify"></i>
+          </a>
         </li>
         <li class="list-item">
-          <a href="#" class="list-link">2</a>
+          <a href="#" class="list-link">
+            <i class="fas fa-power-off"></i>
+          </a>
         </li>
-        <li class="list-item editor-toggle">
-          <a href="#" class="list-link">3</a>
+        <li class="list-item bg_purple">
+          <a href="#" class="list-link" id="toggle-form">
+            <i class="fas fa-columns"></i>
+          </a>
         </li>
       </ul>
     </div>
   </header>
 
-  <div id="left-sidebar-menu" class="sidebar">
+  <div id="left-sidebar-menu" class="sidebar-left">
     <div class="sidebar-inner">
       <div class="sidebar-menu">
         <ul class="list list-column">
@@ -49,10 +57,77 @@
 
   <main class="content-container">
     <div class="content">
-      <h1>THIS IS CONTENT</h1>
+      <div class="container_res">
+        <div class="row">
+          <form class="col_5 bg_grey content_form">
+            <div class="form_row mb_1">
+              <div class="col_4">
+                <input type="radio" id="year" class="form_checkbox__input" name="year" value="Year" checked>
+                <label for="year" class="form_checkbox__label">Year</label>
+              </div>
+              <div class="col_8">
+                <select>
+                  <option selected>2017</option>
+                  <option>2018</option>
+                  <option>2019</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_row mb_1">
+              <div class="col_4">
+                <input type="radio" id="interval" class="form_checkbox__input" name="interval" value="Interval">
+                <label for="interval" class="form_checkbox__label">Interval</label>
+              </div>
+              <div class="col_8">
+                <div class="form_row">
+                  <div class="col_6 pl_0">
+                    <input type="date" class="w_80">
+                    <i class="far fa-calendar-alt"></i>
+                  </div>
+                  <div class="col_6">
+                    <input type="date" class="w_80">
+                    <i class="far fa-calendar-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form_row mb_1">
+              <div class="col_4 pl_0">
+                <label class="form_checkbox__label">Edited by:</label>
+              </div>
+              <div class="col_8">
+                <select class="w_100">
+                  <option selected>[All]</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_row mb_1">
+              <div class="col_4 pl_0">
+                <label class="form_checkbox__label">Events:</label>
+              </div>
+              <div class="col_8">
+                <select class="w_100">
+                  <option selected>[All]</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
 
+  <div id="right-sidebar-menu" class="sidebar-right">
+    <form>
+      <input type="text" id="search-input" class="form_input" placeholder="Name, supplier or Prod No.">
+    </form>
+  </div>
+
+  <script src="./vendor/jQuery.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
